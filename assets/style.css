@@ -53,15 +53,8 @@ section{
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.container-section{
-    display: flex;
-    flex-direction: column;
     gap: 1rem;
-    padding: 14px 10px;
+    padding: 24px 20px;
 }
 
 .container-section-menu{
@@ -85,7 +78,6 @@ section{
 
 .container-section-menu > div > img:hover{
     background-color: #32A961;
-    border-radius: 100%;
 }
 
 .container-section-form{
@@ -97,8 +89,8 @@ section{
 
 .container-section-form > input{
     width: 100%;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 12px 16px;
+    border-radius: 20px;
     background-color: #F6F5F4;
     border: none;
 }
@@ -109,14 +101,21 @@ section{
     box-shadow: 0 0 5px #32A961;
 }
 
-.form-button{
+.section-button{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-button > button{
     border: 1px solid #D8F8D2;
     padding: 10px;
     border-radius: 20px;
     cursor: pointer;
 }
 
-.form-button:hover, .active{
+.section-button > button:hover, .active{
     background-color: #D8F8D2;
 }
 
