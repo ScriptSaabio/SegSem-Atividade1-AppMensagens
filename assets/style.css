@@ -50,11 +50,13 @@ nav{
 }
 
 section{
-    background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    background-color: #FFFFFF;
+    height: 100vh;
+    overflow: hidden;
     padding: 24px 20px;
+    gap: 1rem;
 }
 
 .container-section-menu{
@@ -106,6 +108,7 @@ section{
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .section-button > button{
@@ -118,6 +121,107 @@ section{
 .section-button > button:hover, .active{
     background-color: #D8F8D2;
 }
+
+.container-section-messages{
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container-section-messages::-webkit-scrollbar{
+    width:8px;
+}
+
+.container-section-messages::-webkit-scrollbar-track{
+    background:#f0f2f5;
+}
+
+.container-section-messages::-webkit-scrollbar-thumb{
+    background:#c7c7c7;
+    border-radius:20px;
+}
+
+.container-section-messages::-webkit-scrollbar-thumb:hover{
+    background:#a9a9a9;
+}
+
+.section-messages{
+    display:grid;
+    grid-template-columns:60px 1fr auto;
+    align-items:center;
+    gap:15px;
+
+    padding:12px 16px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.section-messages:hover{
+    background:#f5f5f5;
+}
+
+.section-messages img{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.conteudo{
+    overflow:hidden;
+}
+
+.nome{
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:5px;
+}
+
+.ultima-msg{
+    color:#667781;
+    font-size:14px;
+
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.info{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+}
+
+.hora{
+    font-size:13px;
+    color:#25D366;
+}
+
+.nao-lidas{
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:12px;
+    font-weight:bold;
+}
+
+
+
+/* .section-messages > div > img:hover{
+    background-color: #32A961;
+} */
 
 main{
     background-image: url("./imgs/whatsapp_bg.png");
