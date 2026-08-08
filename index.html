@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js"></script>
     <title>Whastapp Web</title>
 </head>
 
@@ -24,7 +25,7 @@
         </div>
     </nav>
 
-    <section>
+    <section id="contatos">
         <div>
             <div class="container-section-menu">
                 <h1 class="Whats">WhatsApp</h1>
@@ -44,13 +45,15 @@
             </div>
         </div>
         <div class="container-section-messages">
-             <div class="section-messages">
+            <div class="section-messages">
                 <img src="https://i.pravatar.cc/150?img=56" alt="Perfil">
 
                 <div class="conteudo">
                     <p class="nome">Ana Maria</p>
                     <p class="ultima-msg">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim esse repellat consectetur ut, quis, debitis voluptatem aut reiciendis ratione velit impedit harum quibusdam tempore! Alias quos inventore tempora nemo quis.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim esse repellat consectetur ut,
+                        quis, debitis voluptatem aut reiciendis ratione velit impedit harum quibusdam tempore! Alias
+                        quos inventore tempora nemo quis.
                     </p>
                 </div>
 
@@ -367,7 +370,62 @@
     </section>
 
     <main>
-        mensagens
+        <div class="container-main">
+            <header class="container-header">
+                <div class="header-info">
+                    <img src="https://i.pravatar.cc/150?img=56" alt="Perfil">
+                    <div>
+                        <p class="nome">Ana Maria</p>
+                        <p class="status">Online</p>
+                    </div>
+                </div>
+                <div class="header-icons">
+                    <div>
+
+                        <img src="./assets/icons/video-cam.svg" alt="Chamada de Video">
+                        <img src="./assets/icons/down-menu.svg" alt="Chamada de Video">
+
+                        <div class="menu-icons">
+                            <img src="./assets/icons/phone.svg" alt="Chamada de Voz">
+                        </div>
+
+                    </div>
+
+                    <img src="./assets/icons/more-settings.svg" alt="Mais Opções">
+                </div>
+            </header>
+
+            <section class="grid-msg">
+                <p class="recebidas">Lorem, ipsum.</p>
+                <p class="enviadas">Lorem, ipsum.</p>
+            </section>
+
+            <div class="message-container">
+
+                <form class="message-input">
+
+                    <!-- Botão adicionar -->
+                    <button class="message-button" type="button">
+                        <img src="./assets/icons/plus.svg" alt="Adicionar">
+                    </button>
+
+                    <!-- Emoji -->
+                    <button class="message-button" type="button">
+                        <img src="./assets/icons/expressions.svg" alt="Emoji">
+                    </button>
+
+                    <!-- Campo de mensagem -->
+                    <input type="text" placeholder="Digite uma mensagem" autocomplete="off">
+
+                    <!-- Enviar -->
+                    <button class="send-button" type="button">
+                        <img src="./assets/icons/send-message.png" alt="Enviar">
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
     </main>
 </body>
 

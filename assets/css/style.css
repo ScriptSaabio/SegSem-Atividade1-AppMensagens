@@ -1,0 +1,561 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* text-decoration: none; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+body{
+    height: 100dvh;
+    display: grid;
+    grid-template-areas:
+        "nav section main";
+    grid-template-columns: 80px 1fr 2fr;
+}
+
+nav{
+    background-color: #F7F5F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.container-nav{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.container-nav > img{
+    border-radius: 100%;
+    padding: 7px;
+    width: 40px;
+}
+
+.container-nav > img:hover{
+    background-color: #32A961;
+}
+
+.Whats{
+    color:#32A961;
+}
+
+#contatos{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    height: 100vh;
+    overflow: hidden;
+    padding: 24px 20px;
+    gap: 1rem;
+    border-right: 1px solid #D0D4DA;
+}
+
+.container-section-menu{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.container-section-menu > div{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-section-menu > div > img{
+    border-radius: 100%;
+    padding: 7px;
+    width: 40px;
+}
+
+.container-section-menu > div > img:hover{
+    background-color: #32A961;
+}
+
+.container-section-form{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-section-form > input{
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 20px;
+    background-color: #F6F5F4;
+    border: none;
+}
+
+.container-section-form > input:focus{
+    outline: none;
+    border: 1px solid #32A961;
+    box-shadow: 0 0 5px #32A961;
+}
+
+.section-button{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.section-button > button{
+    border: 1px solid #D8F8D2;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.section-button > button:hover, .active{
+    background-color: #D8F8D2;
+}
+
+.container-section-messages{
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container-section-messages::-webkit-scrollbar{
+    width:8px;
+}
+
+.container-section-messages::-webkit-scrollbar-track{
+    background:#f0f2f5;
+}
+
+.container-section-messages::-webkit-scrollbar-thumb{
+    background:#c7c7c7;
+    border-radius:20px;
+}
+
+.container-section-messages::-webkit-scrollbar-thumb:hover{
+    background:#a9a9a9;
+}
+
+.section-messages{
+    display:grid;
+    grid-template-columns:60px 1fr auto;
+    align-items:center;
+    gap:15px;
+
+    padding:12px 16px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.section-messages:hover{
+    background:#f5f5f5;
+}
+
+.section-messages img{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.conteudo{
+    overflow:hidden;
+}
+
+.nome{
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:5px;
+}
+
+.ultima-msg{
+    color:#667781;
+    font-size:14px;
+
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.info{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+}
+
+.hora{
+    font-size:13px;
+    color:#25D366;
+}
+
+.nao-lidas{
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:12px;
+    font-weight:bold;
+}
+
+main {
+    height: 100vh;
+
+    background-image: url("../imgs/whatsapp_bg.png");
+    background-size: cover;
+}
+/* ================================
+   HEADER
+================================ */
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #FFFFFF;
+
+    padding: 10px 20px;
+
+    border-bottom: 1px solid #D0D4DA;
+
+    max-height: 100px;
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-info > img {
+    border-radius: 100%;
+    padding: 7px;
+    width: 80px;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+/* Container dos controles */
+
+.header-icons > div {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+/* ================================
+   ÍCONES
+================================ */
+
+.header-icons img {
+    width: 40px;
+    height: 40px;
+
+    padding: 8px;
+
+    object-fit: contain;
+
+    cursor: pointer;
+
+    border-radius: 100%;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.header-icons img:hover {
+    background-color: rgba(0, 0, 0, 0.07);
+}
+
+
+/* ================================
+   BOTÃO DA SETA
+================================ */
+
+.down-menu {
+    transition: transform 0.25s ease;
+}
+
+
+/* ================================
+   DROPDOWN
+================================ */
+
+.menu-icons {
+    position: absolute;
+
+    top: calc(100% + 10px);
+    right: 0;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 8px;
+
+    min-width: 56px;
+
+    background-color: #F7F5F2;
+
+    border: 1px solid #D0D4DA;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    z-index: 1000;
+}
+
+
+/* ================================
+   DROPDOWN ABERTO
+================================ */
+
+.header-icons.show .menu-icons {
+    display: flex;
+}
+
+
+/* Rotaciona a seta */
+
+.header-icons.show .down-menu {
+    transform: rotate(180deg);
+}
+
+
+/* ================================
+   ÍCONES DO DROPDOWN
+================================ */
+
+.menu-icons img {
+    width: 40px;
+    height: 40px;
+
+    padding: 8px;
+}
+
+.menu-icons img:hover {
+    background-color: rgba(0, 0, 0, 0.07);
+}
+
+
+
+/* ================================
+   ÁREA DE MENSAGEM
+================================ */
+
+.message-container {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   CAMPO DE MENSAGEM
+================================ */
+
+.message-input {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 50px;
+
+    padding: 0 10px;
+
+    box-sizing: border-box;
+
+    background-color: #FFFFFF;
+
+    border-radius: 30px;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.grid-msg {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    /* margin-top: auto; */
+    /* row-gap: 10px; */
+    /* overflow-y: auto; */
+}
+
+
+/* ================================
+   MENSAGENS RECEBIDAS
+================================ */
+
+.recebidas {
+    grid-column: 2/14;
+    background-color: #FFFFFF;
+}
+
+
+/* ================================
+   MENSAGENS ENVIADAS
+================================ */
+
+.enviadas {
+    grid-column: 10/23;
+    background-color: #DCF8C6;
+    justify-self: right;
+}
+
+
+/* ================================
+   ESTILO DAS MENSAGENS
+================================ */
+
+.recebidas,
+.enviadas {
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+
+/* ================================
+   BOTÕES
+================================ */
+
+.message-button,
+.send-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 8px;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.message-button:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.message-button:active,
+.send-button:active {
+    transform: scale(0.9);
+}
+
+
+/* ================================
+   ÍCONES
+================================ */
+
+.message-button img {
+    width: 24px;
+    height: 24px;
+
+    object-fit: contain;
+}
+
+
+/* ================================
+   CAMPO DE TEXTO
+================================ */
+
+.message-input input {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 42px;
+
+    padding: 0 10px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    color: #202124;
+}
+
+.message-input input::placeholder {
+    color: #858585;
+}
+
+
+/* ================================
+   BOTÃO ENVIAR
+================================ */
+
+.send-button {
+    width: 44px;
+    height: 44px;
+
+    margin-left: 4px;
+}
+
+.send-button img {
+    width: 34px;
+    height: 34px;
+
+    object-fit: contain;
+}
+
+.send-button:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
